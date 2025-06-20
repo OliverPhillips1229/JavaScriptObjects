@@ -52,9 +52,9 @@ Solve Exercise 5 here:
 */
 const waterType = pokemon.find(p => p.type === "water" && p.hp > 80);
 const electricType = pokemon.find(p => p.type === "electric" && p.hp > 60);
-const fireType = pokemon.find(p => p.type === "fire" && p.hp > 70);
+const dragonType = pokemon.find(p => p.type === "dragon" && p.hp > 70);
 
-const extraParty = [waterType, electricType, fireType];
+const extraParty = [waterType, electricType, dragonType];
 game.party.push(...extraParty);
 console.log("Exercise 5 result:", game.party);
 
