@@ -51,9 +51,9 @@ Exercise 5
 Solve Exercise 5 here:
 */
 const extraParty = [
-  pokemon.find(p => p.name === "Gengar"),   // Ghost type, strong
-  pokemon.find(p => p.name === "Lapras"),   // Water/Ice, tanky
-  pokemon.find(p => p.name === "Eevee")     // Versatile
+  pokemon.find(p => p.name === "Gengar"),   
+  pokemon.find(p => p.name === "Lapras"),   
+  pokemon.find(p => p.name === "Eevee")     
 ];
 game.party.push(...extraParty);
 console.log("Exercise 5 result:", game.party);
