@@ -48,17 +48,40 @@ if (starterChoices.length > 0) {
 }
 
 /*
-Exercise 5
+Exercise 5 (ORIGINAL EXERCISE)
 1. Choose three more Pokémon from the `pokemon` array and add them to your party.
 2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
 */
-const waterType = pokemon.find(p => p.type === "water" && p.hp > 80);
-const electricType = pokemon.find(p => p.type === "electric" && p.hp > 60);
-const dragonType = pokemon.find(p => p.type === "dragon" && p.hp > 70);
+// const waterType = pokemon.find(p => p.type === "water" && p.hp > 80);
+// const electricType = pokemon.find(p => p.type === "electric" && p.hp > 60);
+// const dragonType = pokemon.find(p => p.type === "dragon" && p.hp > 70);
 
-const extraParty = [waterType, electricType, dragonType];
-game.party.push(...extraParty);
+// const extraParty = [waterType, electricType, dragonType];
+// game.party.push(...extraParty);
+// console.log("Exercise 5 result:", game.party);
+
+/*
+Exercise 5 (UPDATED FOR RANDOM POKEMON CATCHES)
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+*/
+
+const nonStarters = pokemon.filter(p => !p.starter);
+const selectedParty = [];
+
+while (selectedParty.length < 3) {
+  const randomIndex = Math.floor(Math.random() * nonStarters.length);
+  const candidate = nonStarters[randomIndex];
+
+  // Avoid duplicates
+  if (!selectedParty.includes(candidate)) {
+    selectedParty.push(candidate);
+  }
+}
+
+game.party.push(...selectedParty);
 console.log("Exercise 5 result:", game.party);
+
 
 /*
 Exercise 6
