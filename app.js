@@ -51,6 +51,7 @@ if (starterChoices.length > 0) {
 
 /*
 Exercise 5 (ORIGINAL EXERCISE)
+// This also forces 3 specific Pokemon
 1. Choose three more Pokémon from the `pokemon` array and add them to your party.
 2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
 */
