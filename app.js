@@ -50,11 +50,11 @@ Exercise 5
 
 Solve Exercise 5 here:
 */
-const extraParty = [
-  pokemon.find(p => p.name === "Gengar"),   
-  pokemon.find(p => p.name === "Lapras"),   
-  pokemon.find(p => p.name === "Eevee")     
-];
+const waterType = pokemon.find(p => p.type === "water" && p.hp > 80);
+const electricType = pokemon.find(p => p.type === "electric" && p.hp > 60);
+const fireType = pokemon.find(p => p.type === "fire" && p.hp > 70);
+
+const extraParty = [waterType, electricType, fireType];
 game.party.push(...extraParty);
 console.log("Exercise 5 result:", game.party);
 
@@ -212,4 +212,3 @@ Exercise 16
 Solve Exercise 16 here:
 */
 console.log("Exercise 16 result:", game);
-
